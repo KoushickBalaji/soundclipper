@@ -1,0 +1,11 @@
+# Direct dependencies from the verified Python 3.11 environment.
+# Install matching torch/torchaudio builds first for your CPU or CUDA platform.
+torch==2.11.0
+torchaudio==2.11.0
+demucs==4.1.0
+numpy==2.4.6
+soundfile==0.14.0
+PyYAML==6.0.3
+julius==0.2.8
+httpx==0.28.1
+huggingface-hub==1.29.0

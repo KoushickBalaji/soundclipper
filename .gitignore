@@ -1,0 +1,38 @@
+# Local environments and Python caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.test-tmp/
+
+# Downloaded datasets, checkpoints, and generated results
+/data/
+/models/
+/runs/
+/third_party/
+*.wav
+*.flac
+*.mp3
+*.ckpt
+*.pt
+*.pth
+*.th
+*.zip
+*.tar
+*.gz
+*.7z
+
+# Credentials and local editor settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.aws/
+.codex/
+.agents/
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
