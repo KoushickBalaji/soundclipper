@@ -1,5 +1,7 @@
 # SoundClipper
 
+[![Tests](https://github.com/KoushickBalaji/soundclipper/actions/workflows/tests.yml/badge.svg)](https://github.com/KoushickBalaji/soundclipper/actions/workflows/tests.yml)
+
 Extract guitar and a backing track using the official pretrained **HTDemucs six-source**
 model (`htdemucs_6s`). A separate preparation pipeline builds guitar/rest references
 from Slakh2100-redux for a later fine-tuning experiment.
@@ -29,8 +31,8 @@ installing the requirements. CPU inference is supported but can be slow. The
 first separation downloads pretrained weights and requires internet access.
 No dataset is needed to separate your own WAV/FLAC recording.
 
-Dependencies are pinned to the existing working environment; a fresh installation
-on other machines still needs verification. Tests use small synthetic inputs and
+Dependencies are pinned to the existing working environment. A fresh CPU install
+and the offline suite also passed on an Ubuntu GitHub Actions runner. Tests use small synthetic inputs and
 do not download models or establish real-world separation quality.
 
 ## What is included
@@ -123,8 +125,9 @@ preparing data does not start training.
 Verified environment: Python 3.11, Demucs 4.1.0, PyTorch 2.11.0 with CUDA 12.8,
 and an NVIDIA GeForce RTX 5070 Ti. No package upgrades were needed.
 
-All 97 offline tests passed locally on 12 October 2026. GitHub Actions runs the
-same test suite with CPU PyTorch; GPU/model inference is a separate check.
+All 97 offline tests passed locally and on a clean Ubuntu GitHub Actions runner
+on 12 October 2026. GitHub Actions runs the same test suite with CPU PyTorch;
+GPU/model inference is a separate check.
 
 ## Optional experiments
 
@@ -140,7 +143,7 @@ prepared manifests. They are not part of the single-song quick start.
 
 ## Next steps
 
-- Verify the install in a clean environment and pin model-code revisions.
+- Verify fresh Windows/macOS and CUDA installs, and pin model-code revisions.
 - Publish a small listening demo using audio cleared for redistribution.
 - Select a reuse license for original project code.
 - Implement and evaluate pretrained-model fine-tuning.
